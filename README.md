@@ -26,3 +26,17 @@ After flashing a fresh image to the SD card.
          ` }`
    - restart networking service:
      `sudo systemctl restart networking.service`
+
+ - Repeat above steps 'n' times for Pi's in bunch.
+
+ - Networking the Pi's together. This example uses wifi to connect the Pis. As the goal is to create cluster it will be important to have static ip addresss for the Pis. Following steps are to setup static ip.
+
+   - Set static IP addresses
+   - Run `ifconig`
+   - Open /etc/dhcpcd.conf
+   - At the end of the file insert:
+     `interface wlan0
+     `static ip_address=192.168.1.numberGoesHere/24`
+     `static routers=192.168.0.1`
+     `static domain_name_servers=192.168.0.1`
+   - Run `sudo reboot`
