@@ -14,7 +14,7 @@ After flashing a fresh image to the SD card.
      - Localize
      - etc...
    - Finish and reboot
-   - run `sudo apt-get update \n
+   - run `sudo apt-get update\
           sudo apt-get upgrade`
    - enable wifi
      - open wpa_supplicant.conf
