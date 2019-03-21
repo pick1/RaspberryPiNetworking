@@ -8,21 +8,21 @@ Jumping ahead a view steps...
 After flashing a fresh image to the SD card.
 
  - Boot up the Pi.
-   - use `sudo raspi-config` to configure the Pi
-     - enable SSH
-     - Rename the Pi
-     - Localize
-     - etc...
-   - Finish and reboot
-   - run `sudo apt-get update  
-          sudo apt-get upgrade`
-   - enable wifi
-     - open wpa_supplicant.conf
-     - `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
-     - add `network={
-                ssid="replaceWithNetworkId"
-                psk="replaceWithWifiPass"
-            }`
-     - restart networking service:
-       `sudo systemctl restart networking.service`y
-`
+ - Run `sudo raspi-config` to configure the Pi
+   - enable SSH
+   - Rename the Pi
+   - Localize
+   - etc...
+ - Finish and reboot
+ - Perform updates
+   - `sudo apt-get update`
+   - `sudo apt-get upgrade`
+ - Enable wifi
+   - open wpa_supplicant.conf:
+   - `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
+   - add `network={`
+             `ssid="replaceWithNetworkId"`
+             `psk="replaceWithWifiPass"`
+         ` }`
+   - restart networking service:
+     `sudo systemctl restart networking.service`
